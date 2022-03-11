@@ -3,11 +3,11 @@ from tkinter import CENTER
 from pyfiglet import figlet_format
 
 
-class Welcome():
+class Welcome:
 
-    def welcomeMsg(self):
-        print("\n"+figlet_format(" WELCOME TO SNAKE-LADDER", font = "standard", width = 150, justify=CENTER),"\n")
-        sleep(0.5)
+    def welcomeMsg():
+        print("\n"+figlet_format(" WELCOME TO SNAKE-LADDER", font = "standard",width = 150, justify=CENTER),"\n")
+        sleep(0.3)
         print(r"""        /\		     |-----|
        //\\                  |-----|
        ||                    |-----|
@@ -16,10 +16,10 @@ class Welcome():
     \\//                     |-----|
      \/	                     |-----|
     """)
-        sleep(0.5)
+        sleep(0.3)
         print('''Version: Latest.Version\nDeveloped by: Ali@imtiyaz''')
         print("\n"+" HOW TO PLAY THE GAME ".center(100,"-"),"")
-        sleep(0.5)
+        sleep(0.3)
         msg = """
         1. The players will move their pieces from left to right, starting at 1, 
         following the numbers on the board, then the next row from right to left and repeat. 
