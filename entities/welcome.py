@@ -17,7 +17,7 @@ class Welcome:
      \/	                     |-----|
     """)
         sleep(0.3)
-        print('''Version: Latest.Version\nDeveloped by: Ali@imtiyaz''')
+        print('''Version: Latest Version\nDeveloped by: Ali@imtiyaz''')
         print("\n"+" HOW TO PLAY THE GAME ".center(100,"-"),"")
         sleep(0.3)
         msg = """

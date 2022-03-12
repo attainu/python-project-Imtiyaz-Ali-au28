@@ -52,6 +52,7 @@ class Main:
             crrnt_plyr = random_chances[counter%len(players)]
             current_pos = players[crrnt_plyr]
             if input("It's %s's chance:\nroll the DICE: " %(crrnt_plyr.capitalize())).lower().strip() == "roll".lower().strip():
+                # Rolling dice randomlly from range 1 to 6.
                 current_chance = random.randrange(1,7)
                 print("\nROLLING ...\n")
                 print("It's a %s !." %(current_chance))

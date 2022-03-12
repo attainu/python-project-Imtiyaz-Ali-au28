@@ -1,7 +1,7 @@
 class Ladder:
     
     def ladderCreate(text):
-        # while True:
+        
             try:
                 global ladder
                 ladder = {}
@@ -16,7 +16,8 @@ class Ladder:
 
 
     def isLadder(position):
-        
+        """ Checks if current position has ladder or not """
+
         if position in ladder:
             return (position,ladder[position])
  
