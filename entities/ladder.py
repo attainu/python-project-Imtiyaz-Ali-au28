@@ -16,7 +16,7 @@ class Ladder:
 
 
     def isLadder(position):
-        """ Checks if current position has ladder or not """
+        """ Checks if current position has ladder base or not """
 
         if position in ladder:
             return (position,ladder[position])

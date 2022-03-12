@@ -2,7 +2,6 @@ class Snake:
 
     def snakeCreate(text):
 
-        # while True:
         try:
             global snake
             snake = {}
@@ -18,7 +17,7 @@ class Snake:
 
     
     def isSnake(position):
-        """ Checks if current position has snake or not """
+        """ Checks if current position has snake head or not """
   
         if position in snake:
             return (position,snake[position])
