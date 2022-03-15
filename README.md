@@ -116,15 +116,15 @@ This game has been built using Python.
 
     3. dice: This module is very exiting beacause it prints the ASCII pattern of a dice & 
        creates random chances of the players.
-       This module has class Dice with two methods:
-            - randomChance(players)
+       This module has class Dice with a method:
             - dicePattern(current_chance)
 
     4. player: This module to take input of number of players
        from users, creating players and storing their name
        and initial position in the dictionary as key:value pairs and updating 
        the players dictionary as position change.
-       This module has a class Player with three methods:
+       This module has a class Player with four methods:
+            - randomChance(players)
             - playerNumber(text)
             - checkPlayer(players,text)
             - updatePlayers(players,name,dice)
@@ -161,12 +161,12 @@ This game has been built using Python.
 
     2. displayBoard(): This function operation is to open the Board image.
 
-    3. randomChance(players): This function operation is to create random chances for players. It 
-       takes a players dictionary as a parameter, copies in the list, shuffle them & return.
-
-    4. dicePattern(current_chance): This functions operation exciting beacause it's operations is to 
+    3. dicePattern(current_chance): This functions operation exciting beacause it's operations is to 
        print dice ASCII pattern. it takes one parameter which is curent_chance meaning the current random
        dice value.
+
+    4. randomChance(players): This function operation is to create random chances for players. It 
+       takes a players dictionary as a parameter, copies in the list, shuffle them & return.
 
     5. playerNumber(text): This function operations is to take number of players as input from the user. 
        it also limits user to minimum(2) & maximum(4) numbers of players. I have used try-except block 

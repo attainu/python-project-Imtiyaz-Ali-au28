@@ -39,8 +39,7 @@ class Main:
             players[temp_name] = 0
         
         # randomly assign the players chances
-        diceFunc = Dice
-        random_chances = diceFunc.randomChance(players)
+        random_chances = playersFunc.randomChance(players)
         
         # counter to keep track of the chances
         counter = 0
@@ -53,17 +52,21 @@ class Main:
             current_pos = players[crrnt_plyr]
             if input("It's %s's chance:\nroll the DICE: " %(crrnt_plyr.capitalize())).lower().strip() == "roll".lower().strip():
                 # Rolling dice randomlly from range 1 to 6.
-                current_chance = random.randrange(1,7)
+                dice_values = []
+                for dicerolling in range(2):
+                    current_chance = random.randrange(1,7)
+                    dice_values.append(current_chance)
                 print("\nROLLING ...\n")
-                print("It's a %s !." %(current_chance))
+                print("It's a %s !.\n" %(sum(dice_values)))
                 # show the dice image
-                diceFunc.dicePattern(current_chance) 
-                final_pos = players[crrnt_plyr] + current_chance 
-                print(f"\n{crrnt_plyr} rolled a {current_chance} and moved from {current_pos} to {final_pos}")
+                diceFunc = Dice
+                diceFunc.dicePattern(dice_values) 
+                final_pos = players[crrnt_plyr] + sum(dice_values) 
+                print(f"\n{crrnt_plyr} rolled a {sum(dice_values)} and moved from {current_pos} to {final_pos}")
                 # check for snake & ladders & update the position of player in Dictionary
                 playersFunc.updatePlayers(players,crrnt_plyr,current_chance)
                 if not(gameCheckFunc.isGameover(players)[0]):
-                    diceFunc.randomChance(players)
+                    playersFunc.randomChance(players)
             else:
                 print("Your chance is dismissed because you did'nt roll the dice !!")
             # increase the counter    

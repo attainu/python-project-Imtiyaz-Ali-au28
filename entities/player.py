@@ -1,7 +1,16 @@
 from entities.snake import Snake
 from entities.ladder import Ladder
+import random
 
 class Player:
+
+    def randomChance(players):
+        """ creates random chances of the players
+        players: dict(name -> [number])
+        returns: """
+        random_players = list(players.keys()).copy()
+        random.shuffle(random_players)
+        return random_players
 
     def playerNumber(text):
         """ inputs the number of players by user and confirms it.

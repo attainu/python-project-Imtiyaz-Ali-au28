@@ -1,18 +1,6 @@
-import random
-
 class Dice:
 
-    def randomChance(players):
-        """ creates random chances of the players
-        players: dict(name -> [number])
-        returns: """
-        random_players = list(players.keys()).copy()
-        random.shuffle(random_players)
-        return random_players
-
-
-
-    def dicePattern(current_chance):
+    def dicePattern(dice_values):
 
         DICE_ART = {
     1: (
@@ -66,8 +54,8 @@ class Dice:
         DIE_FACE_SEPARATOR = " "
 
         # Will store the dice value when rolled.
-        dice_values = []
-        dice_values.append(current_chance)
+        # dice_values = []
+        # dice_values.append(current_chance)
         
         # Generate a list of dice faces from DICE_ART
         dice_faces = []
