@@ -13,6 +13,7 @@ class Ladder:
                     ladder[temp[0]] = temp[1]    
             except ValueError:
                 print("Enter number only !!\n")
+    
 
 
     def isLadder(position):

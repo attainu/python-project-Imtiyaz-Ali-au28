@@ -33,14 +33,16 @@ class Player:
     def checkPlayer(players,text):
         """ takes player name and checks whether it's in it
             players: dict(name -> [position])
-            text: text you want to show to screen """
+            text: text you want to show to screen """   
             
         while True:
             name = input(text).lower().strip()
             if name not in players:
                 return name
             else:
-                print("That player already exist please try to use abbreviation or another name..\n")            
+                print("That player already exist please try to use abbreviation or another name..\n") 
+
+                          
 
                 
     def updatePlayers(players,name,dice):
@@ -61,5 +63,6 @@ class Player:
             print("WooW!! a ladder is found...\nClimb it fast...")
             print("Climbed up to \"%d\".\n" %(ladderFunc.isLadder(player_p + dice)[1]))
             players[name] = ladderFunc.isLadder(player_p + dice)[1]
-        elif players[name] + dice < 101:
+        elif players[name] + dice < 101 or players[name] + dice > 100:
             players[name] += dice
+        

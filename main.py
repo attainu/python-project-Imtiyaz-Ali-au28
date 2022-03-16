@@ -51,9 +51,9 @@ class Main:
             crrnt_plyr = random_chances[counter%len(players)]
             current_pos = players[crrnt_plyr]
             if input("It's %s's chance:\nroll the DICE: " %(crrnt_plyr.capitalize())).lower().strip() == "roll".lower().strip():
-                # Rolling dice randomlly from range 1 to 6.
+                # Rolling dice randomlly from range 1 to 12.
                 dice_values = []
-                for dicerolling in range(2):
+                for i in range(2):
                     current_chance = random.randrange(1,7)
                     dice_values.append(current_chance)
                 print("\nROLLING ...\n")
@@ -64,9 +64,12 @@ class Main:
                 final_pos = players[crrnt_plyr] + sum(dice_values) 
                 print(f"\n{crrnt_plyr} rolled a {sum(dice_values)} and moved from {current_pos} to {final_pos}")
                 # check for snake & ladders & update the position of player in Dictionary
-                playersFunc.updatePlayers(players,crrnt_plyr,current_chance)
+                playersFunc.updatePlayers(players,crrnt_plyr,sum(dice_values))
                 if not(gameCheckFunc.isGameover(players)[0]):
                     playersFunc.randomChance(players)
+                print("\n")    
+                print(" * "*50)
+                print("\n")    
             else:
                 print("Your chance is dismissed because you did'nt roll the dice !!")
             # increase the counter    
